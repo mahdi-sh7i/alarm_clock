@@ -56,6 +56,4 @@ pip install PyQt5 pygame
 2. Set your desired alarm time and wait for the notification.
 3. When the alarm goes off, acknowledge it in the dialog by clicking "OK".
 
-## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
