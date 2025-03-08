@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>371</width>
+    <height>185</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QLabel" name="label_dialog">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>20</y>
+     <width>351</width>
+     <height>61</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <family>Nimbus Roman</family>
+     <pointsize>22</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: transparent; /* Transparent background */
+    color: rgb(255, 255, 255); /* Text color */
+    border: 2px solid gray; /* Border around the button */
+    padding: 5px; /* Increased padding for better touch targets */
+    border-radius: 10px; /* Rounded corners */
+    margin: 5px; /* Uniform margin on all sides */
+    font-size: 25px; /* Font size for better readability */
+}
+
+QPushButton:hover {
+    border-color: rgba(190, 190, 190, 0.7); /* Lighter border on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover for visual feedback */
+}
+
+QPushButton:pressed {
+    background-color: rgba(255, 255, 255, 0.2); /* Darker background when pressed */
+    border-color: rgba(150, 150, 150, 0.8); /* Change border color when pressed */
+}
+
+QPushButton:disabled {
+    color: rgba(255, 255, 255, 0.5); /* Lighter text color when disabled */
+    border-color: rgba(190, 190, 190, 0.3); /* Lighter border when disabled */
+}
+</string>
+   </property>
+   <property name="text">
+    <string>Alarm! Time's up!</string>
+   </property>
+   <property name="alignment">
+    <set>Qt::AlignCenter</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="btn_ok">
+   <property name="geometry">
+    <rect>
+     <x>110</x>
+     <y>100</y>
+     <width>161</width>
+     <height>51</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>-1</pointsize>
+    </font>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">QPushButton {
+    background-color: transparent; /* Transparent background */
+    color: rgb(255, 255, 255); /* Text color */
+    border: 2px solid gray; /* Border around the button */
+    padding: 5px; /* Increased padding for better touch targets */
+    border-radius: 10px; /* Rounded corners */
+    margin: 5px; /* Uniform margin on all sides */
+    font-size: 32px; /* Font size for better readability */
+}
+
+QPushButton:hover {
+    border-color: rgba(190, 190, 190, 0.7); /* Lighter border on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover for visual feedback */
+}
+
+QPushButton:pressed {
+    background-color: rgba(255, 255, 255, 0.2); /* Darker background when pressed */
+    border-color: rgba(150, 150, 150, 0.8); /* Change border color when pressed */
+}
+
+QPushButton:disabled {
+    color: rgba(255, 255, 255, 0.5); /* Lighter text color when disabled */
+    border-color: rgba(190, 190, 190, 0.3); /* Lighter border when disabled */
+}
+</string>
+   </property>
+   <property name="text">
+    <string>OK</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>-150</x>
+     <y>-110</y>
+     <width>791</width>
+     <height>461</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+   <property name="pixmap">
+    <pixmap>pictures/pic.jpg</pixmap>
+   </property>
+   <property name="scaledContents">
+    <bool>true</bool>
+   </property>
+  </widget>
+  <zorder>label</zorder>
+  <zorder>label_dialog</zorder>
+  <zorder>btn_ok</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

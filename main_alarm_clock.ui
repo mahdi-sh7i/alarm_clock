@@ -1,0 +1,731 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>784</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Nimbus Roman</family>
+    <pointsize>16</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QLCDNumber" name="lcdNumber">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>10</y>
+      <width>741</width>
+      <height>141</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);
+border-color: rgb(0, 0, 0);
+background: transparent;</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_main">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>170</y>
+      <width>311</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Please Set Alarm !</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="setAlarmButton">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>170</y>
+      <width>81</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: transparent; /* Transparent background */
+    color: rgb(255, 255, 255); /* Text color */
+    border: 2px solid gray; /* Border around the button */
+    padding: 5px; /* Increased padding for better touch targets */
+    border-radius: 10px; /* Rounded corners */
+    margin: 5px; /* Uniform margin on all sides */
+    font-size: 25px; /* Font size for better readability */
+}
+
+QPushButton:hover {
+    border-color: rgba(190, 190, 190, 0.7); /* Lighter border on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover for visual feedback */
+}
+
+QPushButton:pressed {
+    background-color: rgba(255, 255, 255, 0.2); /* Darker background when pressed */
+    border-color: rgba(150, 150, 150, 0.8); /* Change border color when pressed */
+}
+
+QPushButton:disabled {
+    color: rgba(255, 255, 255, 0.5); /* Lighter text color when disabled */
+    border-color: rgba(190, 190, 190, 0.3); /* Lighter border when disabled */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Set</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="amPmComboBox">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>270</y>
+      <width>81</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    selection-background-color: transparent; /* Background color when an item is selected */
+    selection-color: rgb(255, 255, 255); /* Text color when an item is selected */
+    color: rgb(255, 255, 255); /* Default text color */
+    border: 2px solid gray; /* Border around the combo box */
+    border-radius: 7px; /* Rounded corners */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 2px; /* Padding inside the combo box */
+}
+
+QComboBox:hover {
+    border-color: rgba(190, 190, 190, 0.7); /* Change border color on hover */
+}
+
+QComboBox::drop-down {
+    border: none; /* No border for dropdown button */
+    background: rgba(0, 0, 0, 0.5); /* Same background as the combo box */
+}
+
+QComboBox::down-arrow {
+    image: url(path/to/your/icon.png); /* Custom arrow icon */
+    width: 10px; /* Width of the arrow icon */
+    height: 10px; /* Height of the arrow icon */
+}
+
+QComboBox::drop-down:hover {
+    background: rgba(30, 30, 30, 0.7); /* Background color when hovering over dropdown button */
+}
+
+QComboBox QAbstractItemView {
+    background: rgba(0, 0, 0, 0.9); /* Background color for dropdown items */
+    color: rgb(255, 255, 255); /* Text color for dropdown items */
+    selection-background-color: rgba(50, 150, 250, 0.8); /* Background color for selected item */
+    selection-color: rgb(255, 255, 255); /* Text color for selected item */
+}
+
+QComboBox:disabled {
+    color: rgba(255, 255, 255, 0.5); /* Text color when disabled */
+    border-color: rgba(190, 190, 190, 0.3); /* Lighter border when disabled */
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="alarmHourInput">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>270</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QSpinBox{
+	color: rgb(255, 255, 255);
+    border: 0px solid gray;
+    border-radius: 7px;
+    background: transparent;
+    padding: 2px;
+	margin-left: 5;
+	margin-right: 18;
+}
+
+QSpinBox:hover {
+    border-color: #009900;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    border: 1px solid gray;
+    transparent
+    border: 3px solid gray;
+	margin-left: 10;
+	margin-right: 12;
+}
+
+QSpinBox::up-button {
+	margin-top: 0;
+    margin-bottom: 2;
+}
+
+QSpinBox::down-button {
+	margin-top: 2;
+    margin-bottom: 0
+}
+
+QSpinBox::up-button:pressed {
+    border-color: #009900;
+}
+
+QSpinBox::down-button:pressed {
+    border-color: #990000;
+}
+
+QSpinBox::button {
+    width: 20px;
+}
+
+QSpinBox:disabled {
+    color: rgba(50, 50, 50, 0.6);
+}</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="alarmMinuteInput">
+    <property name="geometry">
+     <rect>
+      <x>120</x>
+      <y>270</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QSpinBox{
+	color: rgb(255, 255, 255);
+    border: 0px solid gray;
+    border-radius: 7px;
+    background: transparent;
+    padding: 2px;
+	margin-left: 5;
+	margin-right: 18;
+}
+
+QSpinBox:hover {
+    border-color: #009900;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    border: 1px solid gray;
+    transparent
+    border: 3px solid gray;
+	margin-left: 10;
+	margin-right: 12;
+}
+
+QSpinBox::up-button {
+	margin-top: 0;
+    margin-bottom: 2;
+}
+
+QSpinBox::down-button {
+	margin-top: 2;
+    margin-bottom: 0
+}
+
+QSpinBox::up-button:pressed {
+    border-color: #009900;
+}
+
+QSpinBox::down-button:pressed {
+    border-color: #990000;
+}
+
+QSpinBox::button {
+    width: 20px;
+}
+
+QSpinBox:disabled {
+    color: rgba(50, 50, 50, 0.6);
+}</string>
+    </property>
+   </widget>
+   <widget class="QSpinBox" name="alarmSecondInput">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>270</y>
+      <width>71</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">
+QSpinBox{
+	color: rgb(255, 255, 255);
+    border: 0px solid gray;
+    border-radius: 7px;
+    background: transparent;
+    padding: 2px;
+	margin-left: 5;
+	margin-right: 18;
+}
+
+QSpinBox:hover {
+    border-color: #009900;
+}
+
+QSpinBox::up-button, QSpinBox::down-button {
+    border: 1px solid gray;
+    transparent
+    border: 3px solid gray;
+	margin-left: 10;
+	margin-right: 12;
+}
+
+QSpinBox::up-button {
+	margin-top: 0;
+    margin-bottom: 2;
+}
+
+QSpinBox::down-button {
+	margin-top: 2;
+    margin-bottom: 0
+}
+
+QSpinBox::up-button:pressed {
+    border-color: #009900;
+}
+
+QSpinBox::down-button:pressed {
+    border-color: #990000;
+}
+
+QSpinBox::button {
+    width: 20px;
+}
+
+QSpinBox:disabled {
+    color: rgba(50, 50, 50, 0.6);
+}</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Button_stop_music">
+    <property name="geometry">
+     <rect>
+      <x>620</x>
+      <y>170</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: transparent; /* Transparent background */
+    color: rgb(255, 255, 255); /* Text color */
+    border: 2px solid gray; /* Border around the button */
+    padding: 5px; /* Increased padding for better touch targets */
+    border-radius: 10px; /* Rounded corners */
+    margin: 5px; /* Uniform margin on all sides */
+    font-size: 25px; /* Font size for better readability */
+}
+
+QPushButton:hover {
+    border-color: rgba(190, 190, 190, 0.7); /* Lighter border on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover for visual feedback */
+}
+
+QPushButton:pressed {
+    background-color: rgba(255, 255, 255, 0.2); /* Darker background when pressed */
+    border-color: rgba(150, 150, 150, 0.8); /* Change border color when pressed */
+}
+
+QPushButton:disabled {
+    color: rgba(255, 255, 255, 0.5); /* Lighter text color when disabled */
+    border-color: rgba(190, 190, 190, 0.3); /* Lighter border when disabled */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Stop Music</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="comboBox_list_music">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>270</y>
+      <width>311</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="cursor">
+     <cursorShape>PointingHandCursor</cursorShape>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QComboBox {
+    selection-background-color: transparent; /* Background color when an item is selected */
+    selection-color: rgb(255, 255, 255); /* Text color when an item is selected */
+    color: rgb(255, 255, 255); /* Default text color */
+    border: 2px solid gray; /* Border around the combo box */
+    border-radius: 7px; /* Rounded corners */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    padding: 2px; /* Padding inside the combo box */
+}
+
+QComboBox:hover {
+    border-color: rgba(190, 190, 190, 0.7); /* Change border color on hover */
+}
+
+QComboBox::drop-down {
+    border: none; /* No border for dropdown button */
+    background: rgba(0, 0, 0, 0.5); /* Same background as the combo box */
+}
+
+QComboBox::down-arrow {
+    image: url(path/to/your/icon.png); /* Custom arrow icon */
+    width: 10px; /* Width of the arrow icon */
+    height: 10px; /* Height of the arrow icon */
+}
+
+QComboBox::drop-down:hover {
+    background: rgba(30, 30, 30, 0.7); /* Background color when hovering over dropdown button */
+}
+
+QComboBox QAbstractItemView {
+    background: rgba(0, 0, 0, 0.9); /* Background color for dropdown items */
+    color: rgb(255, 255, 255); /* Text color for dropdown items */
+    selection-background-color: rgba(50, 150, 250, 0.8); /* Background color for selected item */
+    selection-color: rgb(255, 255, 255); /* Text color for selected item */
+}
+
+QComboBox:disabled {
+    color: rgba(255, 255, 255, 0.5); /* Text color when disabled */
+    border-color: rgba(190, 190, 190, 0.3); /* Lighter border when disabled */
+}
+</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="Button_play_music">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>170</y>
+      <width>141</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>-1</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: transparent; /* Transparent background */
+    color: rgb(255, 255, 255); /* Text color */
+    border: 2px solid gray; /* Border around the button */
+    padding: 5px; /* Increased padding for better touch targets */
+    border-radius: 10px; /* Rounded corners */
+    margin: 5px; /* Uniform margin on all sides */
+    font-size: 25px; /* Font size for better readability */
+}
+
+QPushButton:hover {
+    border-color: rgba(190, 190, 190, 0.7); /* Lighter border on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Light background on hover for visual feedback */
+}
+
+QPushButton:pressed {
+    background-color: rgba(255, 255, 255, 0.2); /* Darker background when pressed */
+    border-color: rgba(150, 150, 150, 0.8); /* Change border color when pressed */
+}
+
+QPushButton:disabled {
+    color: rgba(255, 255, 255, 0.5); /* Lighter text color when disabled */
+    border-color: rgba(190, 190, 190, 0.3); /* Lighter border when disabled */
+}
+</string>
+    </property>
+    <property name="text">
+     <string>Play Music</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_volume">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>330</y>
+      <width>61</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>60%</string>
+    </property>
+    <property name="alignment">
+     <set>Qt::AlignCenter</set>
+    </property>
+   </widget>
+   <widget class="QSlider" name="Slider_volume">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>330</y>
+      <width>681</width>
+      <height>41</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QPushButton {
+    background-color: transparent;
+    color: rgb(255, 255, 255);
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+QPushButton:disabled {
+    color: rgba(190, 190, 190, 0.7);
+}</string>
+    </property>
+    <property name="orientation">
+     <enum>Qt::Horizontal</enum>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_hours">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>230</y>
+      <width>81</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Hours</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_mins">
+    <property name="geometry">
+     <rect>
+      <x>130</x>
+      <y>230</y>
+      <width>51</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Mins</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_secs">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>230</y>
+      <width>71</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>18</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Secs</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_AP">
+    <property name="geometry">
+     <rect>
+      <x>330</x>
+      <y>230</y>
+      <width>91</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>16</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>AM / PM</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label_select_music">
+    <property name="geometry">
+     <rect>
+      <x>450</x>
+      <y>230</y>
+      <width>231</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Nimbus Roman</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">color: rgb(255, 255, 255);</string>
+    </property>
+    <property name="text">
+     <string>Select Music:</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>791</width>
+      <height>461</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>pictures/pic.jpg</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+   <zorder>label</zorder>
+   <zorder>lcdNumber</zorder>
+   <zorder>label_main</zorder>
+   <zorder>setAlarmButton</zorder>
+   <zorder>amPmComboBox</zorder>
+   <zorder>alarmHourInput</zorder>
+   <zorder>alarmMinuteInput</zorder>
+   <zorder>alarmSecondInput</zorder>
+   <zorder>Button_stop_music</zorder>
+   <zorder>comboBox_list_music</zorder>
+   <zorder>Button_play_music</zorder>
+   <zorder>label_volume</zorder>
+   <zorder>Slider_volume</zorder>
+   <zorder>label_hours</zorder>
+   <zorder>label_mins</zorder>
+   <zorder>label_secs</zorder>
+   <zorder>label_AP</zorder>
+   <zorder>label_select_music</zorder>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
