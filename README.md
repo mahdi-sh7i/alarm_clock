@@ -1,7 +1,10 @@
-# alarm_clock
 # Alarm Clock Application
 
 This repository contains two Python scripts that implement an alarm clock application using PyQt5 for the user interface and Pygame for audio playback.
+
+# Previwe
+
+
 
 ## Code Overview
 
