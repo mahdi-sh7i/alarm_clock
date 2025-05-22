@@ -4,6 +4,7 @@ This repository contains two Python scripts that implement an alarm clock applic
 
 # Previwe
 
+![6](https://github.com/user-attachments/assets/4aef2d66-61e9-42b0-a454-f54157000c88)
 
 
 ## Code Overview
